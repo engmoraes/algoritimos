@@ -9,8 +9,8 @@ public class TreeNPlus1 {
 
 	public void inicio() {
 		Integer ini = 0;
-		Integer fim = 22;
-
+		Integer fim = 22; 
+		
 		List<Integer> n = new ArrayList<Integer>();
 
 		int i = 0;
