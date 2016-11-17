@@ -3,6 +3,7 @@ package br.com.engmoraes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
 
 public class BubbleSort {
 
@@ -11,7 +12,7 @@ public class BubbleSort {
 		
 		Random value = new Random();
 		
-		int tam = 30;
+		int tam = 500;
 		
 		//Insert values
 		for (int i = 0; i < tam; i++) {
@@ -25,8 +26,24 @@ public class BubbleSort {
 		
 		System.out.println("\norder \n");
 		
+		Long time_start = System.currentTimeMillis();
+		values = orderMyCode(values);
+		Long time_finish = System.currentTimeMillis();
+
 		
+		
+		for (int p = 0; p < tam; p++) {
+			System.out.println(values.get(p) + " ");
+		}
+		
+		System.out.println("tempo " + (time_finish-time_start));
+	}
+	
+	
+
+	private List<Integer> orderMyCode(List<Integer> values) {
 		//v1 - o que deu na cabeça
+		
 		int size, conta = values.size();
 		int aa = 0;
 		while(aa!=conta){
@@ -42,10 +59,10 @@ public class BubbleSort {
 			aa++;
 		}
 		
-		for (int p = 0; p < tam; p++) {
-			System.out.println(values.get(p) + " ");
-		}
+		return values;
 	}
+
+
 
 	public static void main(String[] args) {
 		BubbleSort bubbleSort = new BubbleSort();
