@@ -8,7 +8,7 @@ import java.util.List;
 public class TreeNPlus1 {
 
 	public void inicio() {
-		Integer ini = 0;
+		Integer ini = 1;
 		Integer fim = 22; 
 		
 		List<Integer> n = new ArrayList<Integer>();
