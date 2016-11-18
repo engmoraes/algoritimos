@@ -19,12 +19,13 @@ public class Util {
 	}
 
 	List<Integer> remDuplicate(List<Integer> values) {
+		System.out.println("\nDuplicados Removidos\n");
 		return new ArrayList<Integer>(new HashSet(values));
 	}
 	
 	
 	List<Integer> createValues(int tam){
-		
+		System.out.println("\n-> "+ tam + " valores criados\n");
 		List<Integer> values = new ArrayList<Integer>(); 
 		
 		Random value = new Random();
