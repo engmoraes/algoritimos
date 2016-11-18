@@ -1,9 +1,9 @@
 package br.com.engmoraes;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Timer;
 
 public class BubbleSort {
 
@@ -12,7 +12,7 @@ public class BubbleSort {
 		
 		Random value = new Random();
 		
-		int tam = 500;
+		int tam = 50;
 		
 		//Insert values
 		for (int i = 0; i < tam; i++) {
@@ -20,33 +20,40 @@ public class BubbleSort {
 		}
 
 		//List values 
-		for (int i = 0; i < tam; i++) {
-			System.out.println(values.get(i) + " ");
-		}
-		
-		System.out.println("\norder \n");
+		print(values);
 		
 		Long time_start = System.currentTimeMillis();
 		values = orderMyCode(values);
 		Long time_finish = System.currentTimeMillis();
-
-		
-		
-		for (int p = 0; p < tam; p++) {
-			System.out.println(values.get(p) + " ");
-		}
 		
 		System.out.println("tempo " + (time_finish-time_start));
+
+		print(values);
+		print(remDuplicate(values));
 	}
 	
+	private List<Integer> remDuplicate(List<Integer> values){
+		return new ArrayList<Integer>(new HashSet(values));
+	}
 	
+	 
+	private void print(List<Integer> values){
+		
+		String txt = "";
+		
+		for (int p = 0; p < values.size(); p++) {
+			txt += values.get(p) +", ";
+		}
+		System.out.println(txt);
+		
+	}
 
 	private List<Integer> orderMyCode(List<Integer> values) {
-		//v1 - o que deu na cabeça
+		//v1 -
 		
 		int size, conta = values.size();
-		int aa = 0;
-		while(aa!=conta){
+		int tam = 0;
+		while(tam!=conta){
 			size = conta;
 			while(size != 1){
 				size--;
@@ -56,7 +63,7 @@ public class BubbleSort {
 					values.add(size-1, temp);		
 				}
 			}
-			aa++;
+			tam++;
 		}
 		
 		return values;
