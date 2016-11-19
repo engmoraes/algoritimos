@@ -9,7 +9,8 @@ public class Util {
 
 
 	void print(List<Integer> values) {
-
+		
+		System.out.println("\nprint:");
 		String txt = "";
 
 		for (int p = 0; p < values.size(); p++) {
@@ -25,7 +26,7 @@ public class Util {
 	
 	
 	List<Integer> createValues(int tam){
-		System.out.println("\n-> "+ tam + " valores criados\n");
+		System.out.println("\n-> "+ tam + " valores criados");
 		List<Integer> values = new ArrayList<Integer>(); 
 		
 		Random value = new Random();

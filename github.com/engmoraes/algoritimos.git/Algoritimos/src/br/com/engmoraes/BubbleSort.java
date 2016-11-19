@@ -7,7 +7,7 @@ public class BubbleSort {
 
 	
 	List<Integer> bubble(List<Integer> values) {
-		// v1 
+		// v1 desc
 
 		int size, conta = values.size();
 		int tam = 0;
