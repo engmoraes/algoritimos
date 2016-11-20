@@ -10,17 +10,20 @@ public class Main {
 
 	public void init() {
 
-		List<Integer> values = util.createValues(10);
 
-		// List values
-		util.print(values);
 		// 1 BubbleSort
 		// 2 SelectionSort
 		// 3 InsertionSort
 		
 		String order = "";
 		while (order != null) {
-			order = JOptionPane.showInputDialog("qual tipo de ordenação ?");
+			
+			List<Integer> values = util.createValues(10);
+
+			// List values
+			util.print(values);
+			
+			order = JOptionPane.showInputDialog("Qual tipo de ordenação ?");
 
 			if (order == null || !order.chars().allMatch(Character::isDigit)) {
 				break;

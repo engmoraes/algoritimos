@@ -8,6 +8,10 @@ import java.util.Random;
 public class Util {
 
 
+	int soma(int a){
+		return a+10;
+	}
+	
 	void print(List<Integer> values) {
 		
 		System.out.println("\nprint:");
@@ -15,6 +19,8 @@ public class Util {
 
 		for (int p = 0; p < values.size(); p++) {
 			txt += values.get(p) + ", ";
+			
+			
 		}
 		System.out.println(txt);
 	}
