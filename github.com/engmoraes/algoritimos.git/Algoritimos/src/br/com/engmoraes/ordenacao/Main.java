@@ -1,4 +1,4 @@
-package br.com.engmoraes;
+package br.com.engmoraes.ordenacao;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class Main {
 			// List values
 			util.print(values);
 			
-			order = JOptionPane.showInputDialog("Qual tipo de ordenação ?");
+			order = JOptionPane.showInputDialog("Qual tipo de ordenacao ?");
 
 			if (order == null || !order.chars().allMatch(Character::isDigit)) {
 				break;

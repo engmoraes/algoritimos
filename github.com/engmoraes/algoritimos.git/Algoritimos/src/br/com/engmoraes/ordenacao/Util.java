@@ -1,4 +1,4 @@
-package br.com.engmoraes;
+package br.com.engmoraes.ordenacao;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class Util {
 	
 	void print(List<Integer> values) {
 		
-		System.out.println("\nprint:");
+		System.out.println("print:");
 		String txt = "";
 
 		for (int p = 0; p < values.size(); p++) {
@@ -32,7 +32,7 @@ public class Util {
 	
 	
 	List<Integer> createValues(int tam){
-		System.out.println("\n-> "+ tam + " valores criados");
+		System.out.println("\n-> "+ tam + " valores criados:");
 		List<Integer> values = new ArrayList<Integer>(); 
 		
 		Random value = new Random();

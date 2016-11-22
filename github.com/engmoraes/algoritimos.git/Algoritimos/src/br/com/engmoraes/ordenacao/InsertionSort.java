@@ -1,4 +1,4 @@
-package br.com.engmoraes;
+package br.com.engmoraes.ordenacao;
 
 import java.util.List;
 
